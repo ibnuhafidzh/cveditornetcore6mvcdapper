@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using System.Runtime;
 using System.Xml.Linq;
 using WebApplication.Controllers;
+using WebApplication.Data;
+using WebApplication.Repositories;
 
 namespace WebApplication
 {
@@ -50,6 +52,10 @@ namespace WebApplication
             {
                 options.ValidationInterval = TimeSpan.FromMinutes(1);
             });
+            services.Configure<DbSettings>(Configuration.GetSection("DbSettings"));
+
+            services.AddTransient<DapperDbContext, DapperDbContext>();
+            services.AddTransient<IData, DataRepository>();
             services.AddMvc();
         }
 

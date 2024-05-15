@@ -1,0 +1,55 @@
+﻿@model WebApplication.Models.DataModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="card rounded-0">
+    <div class="card-header">
+        <h4>Edit Data</h4>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit">
+            <input hidden asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nationality" class="control-label"></label>
+                <input asp-for="Nationality" class="form-control" />
+                <span asp-validation-for="Nationality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Education" class="control-label"></label>
+                <textarea asp-for="Education" class="form-control" style="height: 200px;"></textarea>
+                <span asp-validation-for="Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Skills" class="control-label"></label>
+                <textarea asp-for="Skills" class="form-control" style="height: 200px;"></textarea>
+                <span asp-validation-for="Skills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Experience" class="control-label"></label>
+                <textarea asp-for="Experience" class="form-control" style="height: 200px;"></textarea>
+                <span asp-validation-for="Experience" class="text-danger"></span>
+            </div>
+            <div class="form-group" style=" float:right; margin-top:10px">
+                <input type="submit" value="Save" class="btn btn-primary rounded-0" />
+                <a href="@Url.Action("Index", "Home")" class="btn btn-md btn-primary rounded-0"><i class="fa-solid fa-backward"></i> Back to list</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
