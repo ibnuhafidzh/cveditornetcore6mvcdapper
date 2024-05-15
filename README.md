@@ -34,7 +34,7 @@ step by step:
 5. find Node Database on you pgAdmin 4 then right click it will show context menu like image bellow
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasenodedatabases.png)
 6. find and hover "Create" on context menu and click "Database" on sub context menu like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasecontextmenucreate2.png)
+![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasecontextmenucreate.png)
 7. it will show the dialog of create database like image bellow
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasedialogcreate.png)
 8. find and click field database and fill with "cveditor" like image bellow
@@ -59,7 +59,7 @@ please choose what the step do you like.
 before you create table "data" make sure your have created the database "cveditor" and it will show on your node "database" if not found you can check follow the instruction in the section "create the database "cveditor" using pgAdmin on postgree"
 
 step by step :
-1. after you make sure the database "cveditor" has been created find and click node "cveditor"
+1. find and click node "cveditor"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablecveditor.png)
 2. find and click node "Schemas"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableschemas.png)
@@ -92,36 +92,34 @@ step by step :
 before you create table "data" make sure your have created the database "cveditor" and it will show on your node "database" if not found you can check follow the instruction in the section "create the database "cveditor" using pgAdmin on postgree"
 
 step by step :
-1. after you make sure the database "cveditor" has been created
-![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/pgadmin.png)
-2. find and right click node "cveditor"
+1. find and right click node "cveditor"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablecveditor.png)
-4. it will show context menu like image bellow
+2. it will show context menu like image bellow
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablescveditorcontextmenu.png)
-5. find and click "Query Tool" on context menu
+3. find and click "Query Tool" on context menu
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablescontextmenuquerytools.png)
-6. it will show the dialog "Query Tool"
+4. it will show the dialog "Query Tool"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablesdialogquerytools.png)
-7. find text file with name "script create public schema and create table data.txt" on folder "Manual Book" and copy the content into Field "Query" on dialog Query Tool
+5. find text file with name "script create public schema and create table data.txt" on folder "Manual Book" and copy the content into Field "Query" on dialog Query Tool
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablesdialogquerytoolsclickfieldquery.png)
-8. please make sure the content that are paste on field "Query" on dialog "Query Tools" are same with the files name "script create public schema and create table data.txt"
+6. please make sure the content that are paste on field "Query" on dialog "Query Tools" are same with the files name "script create public schema and create table data.txt"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablesdialogquerytoolsclickfieldquery.png)
-9. find and click the play button on dialog Query Tools
+7. find and click the play button on dialog Query Tools
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablesdialogquerytoolsbuttonplay.png)
-10. please wait several minute and check the output message on Query Tools
+8. please wait several minute and check the output message on Query Tools
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablesdialogquerytoolsoutput.png)
-11. if the output message like "schema "public" already exists, skipping
+9. if the output message like "schema "public" already exists, skipping
 ALTER TABLE" it means you'r succed for created schema and table
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablesdialogquerytoolsoutputdetails.png)
-12. to makesure the tables are created find and click the arrow on node "Schemas"
+10. to makesure the tables are created find and click the arrow on node "Schemas"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableschemas.png)
-13. find and right click the arrow on node "Public"
+11. find and right click the arrow on node "Public"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablepublic.png)
-14. find and click the arrow on node "tables"
+12. find and click the arrow on node "tables"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableclicktables.png)
-15. it will show the table "data" has been created
+13. it will show the table "data" has been created
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableclicktablesdetails.png)
-16. if you want to see the coloumn just click the node coloumn
+14. if you want to see the coloumn just click the node coloumn
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableclickcoloumns.png)
 
 
@@ -147,12 +145,12 @@ here's the step by step
 
 ## No such host is known
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/knownbughost.png)
-for local pc makesure your instaled the required application that are listed on "Before Run This Application" section
-after your makesure all the program has been instaled if your on local pc try using "localhost" but if your using outside your pc just using the ip
+for local pc makesure your instaled the required application that are listed on "list of required application" section
+after your makesure all the program has been instaled if your on local pc try using "localhost" but if your using outside your pc just using the ip or hostname
 
 ## Failed to connect to 127.0.0.1:543
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/knownbugport.png)
-please makesure your using right port of postgree that instaled from postgree
+please makesure your using right port of your instaled postgree services
 
 ## password authentication failed for user "postgres1"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/knownbugauthentication.png)
