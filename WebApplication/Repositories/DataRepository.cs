@@ -13,11 +13,11 @@ namespace WebApplication.Repositories
         {
             this.context = context;
         }
-        public async Task<IEnumerable<DataModel>> Get()
+        public IEnumerable<DataModel> Get()
         {
             var sql = $@"SELECT id, name, gender, nationality, education, skills, experience FROM data";
             using var connection = context.CreateConnection();
-            return await connection.QueryAsync<DataModel>(sql);
+            return connection.Query<DataModel>(sql);
         }
         public async Task<DataModel> Find(string Id)
         {

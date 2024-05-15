@@ -1,0 +1,33 @@
+-- SCHEMA: public
+
+-- DROP SCHEMA IF EXISTS public ;
+
+CREATE SCHEMA IF NOT EXISTS public
+    AUTHORIZATION pg_database_owner;
+
+COMMENT ON SCHEMA public
+    IS 'standard public schema';
+
+GRANT USAGE ON SCHEMA public TO PUBLIC;
+
+GRANT ALL ON SCHEMA public TO pg_database_owner;
+
+-- Table: public.data
+
+-- DROP TABLE IF EXISTS public.data;
+
+CREATE TABLE IF NOT EXISTS public.data
+(
+    id character varying(255) COLLATE pg_catalog."default",
+    name character varying(255) COLLATE pg_catalog."default",
+    gender character varying(255) COLLATE pg_catalog."default",
+    nationality character varying(255) COLLATE pg_catalog."default",
+    education character varying(5000) COLLATE pg_catalog."default",
+    skills character varying(5000) COLLATE pg_catalog."default",
+    experience character varying(999999) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.data
+    OWNER to postgres;

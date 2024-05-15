@@ -15,9 +15,9 @@ namespace WebApplication.Controllers
             this.dataRepository = Data;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var data = await dataRepository.Get();
+            var data = dataRepository.Get();
 
             return View(data);
         }

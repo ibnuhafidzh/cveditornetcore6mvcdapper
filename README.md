@@ -7,10 +7,10 @@ This project was created using visual studio 2022 and mvc 6
 ## Nugget Packages
 
 here's the list of nugget package that was installed :
-- dapper version 2.13.5 for orm and connectivity to postgree database
+- dapper version 2.13.5 for orm and data mapper that will enchance the ado.net connectivity
 - npgsql version 8.0.3 connectivity to postgree database
 
-## Before Run This Application
+## list of required application
 
 if you'r using local pc or laptop makesure when you'r running this project.
 you should have installed this list of application :
@@ -21,105 +21,152 @@ you should have installed this list of application :
 - PostgreSQL 16
 - PgBouncer 1.22.1
 
-create the database "cveditor" using pgAdmin on postgree
+## create the database "cveditor" using pgAdmin on postgree
+
 step by step:
-1. make sure you have installed the list of application that located on above
-2. open application pgAdmin 4
+1. make sure you have installed the list of application that located on section "list of required application"
+2. open application pgAdmin 4 and login using your credential
+![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabaseiconpgadmin.png)
+3. here's the view then you'r success login using your credential on pgAdmin 4
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabaseexpanddatabases.png)
+4. find Node "Server" and click the arrow on the node in pgAdmin 4
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabaseservernode.png)
+5. find Node Database on you pgAdmin 4 then right click it will show context menu like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasenodedatabases.png)
+6. find and hover "Create" on context menu and click "Database" on sub context menu like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasecontextmenucreate2.png)
+7. it will show the dialog of create database like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasedialogcreate.png)
+8. find and click field database and fill with "cveditor" like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasefielddatabasefilled.png)
+9. click save button but make sure you'r fill the field database like step number 6
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasesavebutton.png)
+10. please wait several minute until it show the popup information "database connected"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasepopupsuccesscreateddatabase.png)
+11. then the page will show cveditor on node "database"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createdatabasesuccesscreateddatabase.png)
 
-3. login using your credential
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-4. find Node Database on you pgAdmin 4 then right click it will show context menu like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-5. click "Create" on context menu and click "Database" on sub context menu like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-6. click field database and fill with "cveditor" like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-7. click submit button but make sure you'r fill the field database like step number 6
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-8. please wait several minute then the page will show cveditor on node "database"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## create table "data" in database "cveditor" on postgree using pgAdmin
+before you create table "data" make sure your have created the database "cveditor" and it will show on your node "database" if not found you can check follow the instruction in the section "create the database "cveditor" using pgAdmin on postgree"
 
-create table "data" in database "cveditor" on postgree using pgAdmin
 there are two ways
 a. create using export menu
 b. create using query tools
-i have give the tutorial for it, you can choose what the step do you like.
+the different between the step a and b is the b already have one data in tables.
+please choose what the step do you like.
 
-a. create table "data" in database "cveditor" on postgree using pgAdmin using menu export
+## a. create table "data" in database "cveditor" on postgree using pgAdmin using menu export
+before you create table "data" make sure your have created the database "cveditor" and it will show on your node "database" if not found you can check follow the instruction in the section "create the database "cveditor" using pgAdmin on postgree"
+
 step by step :
-1. makesure you have created the database "cveditor" and it will show on your node "database" if you'r didn't create the database make sure to follow the step create the database "cveditor" using pgAdmin
-2. after you make sure the database "cveditor" has been created find and click node "cveditor"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-3. find and click node "Schemas"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-4. find and right click node "Public" it will show context menu like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-5. find and click "Restore" on context menu
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-6. click icon folder on field filename and find the files name "cveditor" the path are located on the same project in folder manual book so makesure for it
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-7. after you find the filename "cveditor" double click it
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-8. please make sure your using the correct path on field filename and click button "Restore"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-9. please wait several minute and the page will show alert like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-10. finish
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+1. after you make sure the database "cveditor" has been created find and click node "cveditor"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablecveditor.png)
+2. find and click node "Schemas"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableschemas.png)
+3. find and right click node "Public"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablepublic.png)
+3. it will show context menu like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablepubliccontextmenu.png)
+4. find and click "Restore" on context menu
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablecontextmenurestore.png)
+5. it will show the Restore dialog like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablecontextmenudialogrestore.png)
+6. click icon folder on field filename that are located on Restore Dialog
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablecontextmenudialogrestoreiconfolder.png)
+7.  find the files name "cveditor" the path are located on the same project in folder manual book so makesure for it
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablefieldfilename.png)
+8. after you find the filename "cveditor.sql" double click it
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtabledialogpickfilenamecveditor.png)
+9. please make sure your using the correct path on field filename and click button "Restore"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtabledialogclickrestorebutton.png)
+10. please wait several minute and the page will show alert like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtabledialogsucesscreatedtable.png)
+11. find and click the arrow on node "tables"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableclicktables.png)
+12. it will show the table "data" has been created
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableclicktablesdetails.png)
+13. if you want to see the coloumn just click the node coloumn
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableclickcoloumns.png)
 
-b. create table "data" in database "cveditor" on postgree using pgAdmin using query tools
+## b. create table "data" in database "cveditor" on postgree using pgAdmin using query tools
+before you create table "data" make sure your have created the database "cveditor" and it will show on your node "database" if not found you can check follow the instruction in the section "create the database "cveditor" using pgAdmin on postgree"
+
 step by step :
-1. makesure you have created the database "cveditor" and it will show on your node "database" if you'r didn't create the database make sure to follow the step create the database "cveditor" using pgAdmin
-2. after you make sure the database "cveditor" has been created find and click node "cveditor"
+1. after you make sure the database "cveditor" has been created
 ![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-3. find and click node "Schemas"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-4. find and right click node "Public" it will show context menu like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-5. find and click "Restore" on context menu
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-6. click icon folder on field filename and find the files name "cveditor" the path are located on the same project in folder manual book so makesure for it
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-7. after you find the filename "cveditor" double click it
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-8. please make sure your using the correct path on field filename and click button "Restore"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-9. please wait several minute and the page will show alert like image bellow
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-10. finish
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+2. find and right click node "cveditor"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablecveditor.png)
+4. it will show context menu like image bellow
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablescveditorcontextmenu.png)
+5. find and click "Query Tool" on context menu
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablescontextmenuquerytools.png)
+6. it will show the dialog "Query Tool"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablesdialogquerytools.png)
+7. find text file with name "script create public schema and create table data.txt" on folder "Manual Book" and copy the content into Field "Query" on dialog Query Tool
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablesdialogquerytoolsclickfieldquery.png)
+8. please make sure the content that are paste on field "Query" on dialog "Query Tools" are same with the files name "script create public schema and create table data.txt"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablesdialogquerytoolsclickfieldquery.png)
+9. find and click the play button on dialog Query Tools
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablesdialogquerytoolsbuttonplay.png)
+10. please wait several minute and check the output message on Query Tools
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablesdialogquerytoolsoutput.png)
+11. if the output message like "schema "public" already exists, skipping
+ALTER TABLE" it means you'r succed for created schema and table
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablesdialogquerytoolsoutputdetails.png)
+12. to makesure the tables are created find and click the arrow on node "Schemas"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableschemas.png)
+13. find and right click the arrow on node "Public"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtablepublic.png)
+14. find and click the arrow on node "tables"
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableclicktables.png)
+15. it will show the table "data" has been created
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableclicktablesdetails.png)
+16. if you want to see the coloumn just click the node coloumn
+![cveditornetcore6mvcdapper-create-database-pgadmin](createtableclickcoloumns.png)
 
+
+## Run the visual studio project
 oke here's the final step after you created the database "cveditor" and table "data" please open visual studio project and run the project.
 here's the step by step
-1. go to your path download of this project and find and double click the filename ""
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-2. find file appsconfig. the makesure the database connection like host , port , username , password , database name
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
-3. after 
+1. go to your path download of this project and find and double click the filename "cveditornetcore6mvcdapper.sln"
+![cveditornetcore6mvcdapper-create-database-pgadmin](runcveditornetcore6mvcdapper.png)
+2. it will show the project are open on visual studio
+![cveditornetcore6mvcdapper-create-database-pgadmin](runshowvisualstudioproject.png)
+3. find file with name "appsettings.json" on solution explore and double click , on image bellow i have color it with blue or cyan
+![cveditornetcore6mvcdapper-create-database-pgadmin](runappsettings.png)
+4. it will show the detail of filename "appsettings.json"
+![cveditornetcore6mvcdapper-create-database-pgadmin](rundetailsappsettings.png)
+5. please makesure the database connection like host , port , username , password , database name are same with your postgree on local pc
+![cveditornetcore6mvcdapper-create-database-pgadmin](rundetailsappsettings.png)
+6. find and click the green play button 
+![cveditornetcore6mvcdapper-create-database-pgadmin](rungreenbuttonplay.png)
+7. please wait several menit until it open the default browser and will show the website completely
+![cveditornetcore6mvcdapper-create-database-pgadmin](runwebsitecompleted.png)
 
 ## Known Bug and how to handle it
 
-No such host is known
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## No such host is known
+![cveditornetcore6mvcdapper-create-database-pgadmin](knownbughost.png)
 for local pc makesure your instaled the required application that are listed on "Before Run This Application" section
 after your makesure all the program has been instaled if your on local pc try using "localhost" but if your using outside your pc just using the ip
 
-Failed to connect to 127.0.0.1:543
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## Failed to connect to 127.0.0.1:543
+![cveditornetcore6mvcdapper-create-database-pgadmin](knownbugport.png)
 please makesure your using right port of postgree that instaled from postgree
 
-password authentication failed for user "postgres1"
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## password authentication failed for user "postgres1"
+![cveditornetcore6mvcdapper-create-database-pgadmin](knownbugauthentication.png)
 please makesure your using right credential for login into postgree
 
-database "cveditor" does not exist
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## database "cveditor" does not exist
+
+![cveditornetcore6mvcdapper-create-database-pgadmin](knownbugdatabase.png)
 please makesure your created database "cveditor" on your postgree
 
-relation "data" does not exist
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## relation "data" does not exist
+![cveditornetcore6mvcdapper-create-database-pgadmin](knownbugtable.png)
 please makesure there are table "data" on database "cveditor"
 
-column "skills" of relation "data" does not exist
-![cveditornetcore6mvcdapper-create-database-pgadmin](pgadmin.png)
+## column "skills" of relation "data" does not exist
+![cveditornetcore6mvcdapper-create-database-pgadmin](knownbugcoloumn.png)
 please makesure there are coloumn "id", "name", "gender", "nationality", "education", "skills", "experience" in table "data" on database "cveditor" or you can reimport the table using files name "cveditor.sql" on folder "Manual Book"

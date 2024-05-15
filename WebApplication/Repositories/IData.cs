@@ -4,7 +4,7 @@ namespace WebApplication.Repositories
 {
     public interface IData
     {
-        Task<IEnumerable<DataModel>> Get();
+        IEnumerable<DataModel> Get();
         Task<DataModel> Find(String uid);
         Task<DataModel> Add(DataModel model);
         Task<DataModel> Update(DataModel model);
