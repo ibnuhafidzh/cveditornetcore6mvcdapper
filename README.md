@@ -10,6 +10,20 @@ here's the list of nugget package that was installed :
 - dapper version 2.13.5 for orm and data mapper that will enchance the ado.net connectivity
 - npgsql version 8.0.3 connectivity to postgree database
 
+## list of structure directory
+
+here's the list of directory :
+- ImagesReadme
+it is the folder of image that link into readme files
+- Manual Book
+it is the folder that countain the backup sql file and script for database
+- WebApplication
+it is the main folder of visual studio project
+- .vs
+it is the historical git activity folder
+- .git
+it is the historical git activity folder
+
 ## list of required application
 
 if you'r using local pc or laptop makesure when you'r running this project.
