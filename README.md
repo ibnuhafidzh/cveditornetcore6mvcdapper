@@ -16,7 +16,7 @@ here's the list of directory :
 - ImagesReadme
 it is the folder of image that link into readme files
 - Manual Book
-it is the folder that countain the backup sql file and script for database
+it is the folder that contain the backup postgree file and script for database
 - WebApplication
 it is the main folder of visual studio project
 - .vs
@@ -24,9 +24,26 @@ it is the historical git activity folder
 - .git
 it is the historical git activity folder
 
+## Download The Visual Studio Project from github
+
+step by step :
+1. make sure your open the github repository page  
+![cveditornetcore6mvcdapper-download-url](ImagesReadme/downloadurl.png)
+2. click the code button 
+![cveditornetcore6mvcdapper-download-clickcodebutton](ImagesReadme/downloadclickcode.png)
+3. it will show the context menu
+![cveditornetcore6mvcdapper-download-contextmenu](ImagesReadme/downloadcontext.png)
+4. click the download zip
+![cveditornetcore6mvcdapper-download-zip](ImagesReadme/downloadzip.png)
+5. it will auto download into your default download path
+![cveditornetcore6mvcdapper-download-autopath](ImagesReadme/downloadautopath.png)
+
+then just extract using any zip programs
+
+
 ## list of required application
 
-if you'r using local pc or laptop makesure when you'r running this project.
+if you are using local pc or laptop makesure when you are running this project.
 you should have installed this list of application :
 - Visual Studio 2022 with mvc 6.0 package
 - pgJDBC 42.7.2
@@ -47,15 +64,15 @@ step by step:
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabaseservernode.png)
 5. find Node Database on you pgAdmin 4 then right click
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasenodedatabases.png)
-6. it will show context menu like image bellow
+6. it will show context menu like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasenodedatabasesshowcontext.png)
-7. find and hover "Create" on context menu and click "Database" on sub context menu like image bellow
+7. find and hover "Create" on context menu and click "Database" on sub context menu like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasecontextmenucreate.png)
-8. it will show the dialog of create database like image bellow
+8. it will show the dialog of create database like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasedialogcreate.png)
-9. find and click field database and fill with "cveditor" like image bellow
+9. find and click field database and fill with "cveditor" like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasefielddatabasefilled.png)
-10. click save button but make sure you'r fill the field database like step number 6
+10. click save button but make sure you'r fill the field database like step number 9
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasesavebutton.png)
 11. please wait several minute until it show the popup information "database connected"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createdatabasepopupsuccesscreateddatabase.png)
@@ -83,11 +100,11 @@ step by step :
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableschemas.png)
 3. find and right click node "Public"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablepublic.png)
-3. it will show context menu like image bellow
+3. it will show context menu like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablepubliccontextmenu.png)
 4. find and click "Restore" on context menu
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablecontextmenurestore.png)
-5. it will show the Restore dialog like image bellow
+5. it will show the Restore dialog like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablecontextmenudialogrestore.png)
 6. click icon folder on field filename that are located on Restore Dialog
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtablecontextmenudialogrestoreiconfolder.png)
@@ -97,7 +114,7 @@ step by step :
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtabledialogpickfilenamecveditor.png)
 9. please make sure your using the correct path on field filename and click button "Restore"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtabledialogclickrestorebutton.png)
-10. please wait several minute and the page will show alert like image bellow
+10. please wait several minute and the page will show alert like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtabledialogsucesscreatedtable.png)
 11. find and click the arrow on node "tables"
 ![cveditornetcore6mvcdapper-create-database-pgadmin](ImagesReadme/createtableclicktables.png)
@@ -112,7 +129,7 @@ before you create table "data" make sure your have created the database "cvedito
 step by step :
 1. find and right click node "cveditor"
 ![cveditornetcore6mvcdapper-create-database-pgadminb](ImagesReadme/createtablecveditor.png)
-2. it will show context menu like image bellow
+2. it will show context menu like this image 
 ![cveditornetcore6mvcdapper-create-database-pgadminb](ImagesReadme/createtablescveditorcontextmenu.png)
 3. find and click "Query Tool" on context menu
 ![cveditornetcore6mvcdapper-create-database-pgadminb](ImagesReadme/createtablescontextmenuquerytools.png)
@@ -143,6 +160,7 @@ ALTER TABLE" it means you'r succed for created schema and table
 
 ## Run the visual studio project
 oke here's the final step after you created the database "cveditor" and table "data" please open visual studio project and run the project.
+btw don't forget to download this visual studio project if you don't know how to download just follow the section "Download The Visual Studio Project from github"
 here's the step by step
 1. go to your path download of this project and find and double click the filename "cveditornetcore6mvcdapper.sln"
 ![cveditornetcore6mvcdapper-runproject-solution](ImagesReadme/runcveditornetcore6mvcdapper.png)
